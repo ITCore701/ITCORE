@@ -23,9 +23,30 @@
     </script>
 
     <style>
-        .text-left{
-            text-align: left;
+        .top-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; /* يخلي اليسار واليمين منفصلين */
+          padding: 0.5rem 1rem;
         }
+
+        .logo-title {
+          display: flex;
+          align-items: center;
+          gap: 8px; /* المسافة بين اللوجو والكلمة */
+        }
+
+        .top-logo img {
+          height: 40px;
+          width: auto;
+        }
+
+        .text {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 0;
+        }
+
         .top-bar{
           position: fixed;
           top: 0;
@@ -1079,6 +1100,48 @@
             margin-right: 5px;
             background: white;
         }
+
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.company-name {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.company-tagline {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  .company-name {
+    font-size: 2rem;
+  }
+}
     </style>
 </head>
 
@@ -1106,7 +1169,7 @@
 
             <!-- Logo -->
             <div class="logo-container">
-                      <img src="https://i.postimg.cc/28ghsNLg/logo-for-website.jpg" alt="Logo" class="logo" width="170" height="170" style="border-radius: 50%;" />
+                      <img src="https://i.postimg.cc/44tsrF6s/2.png" alt="Logo" class="logo" width="170" height="170" style="border-radius: 50%;" />
                       <h1 class="company-name">IT Core</h1>
                               <p class="company-tagline">Professional IT Solutions & Services</p>
         </div>
@@ -1496,7 +1559,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Our Location</h4>
-                                <p>123 Technology Street, Business District, Cairo, Egypt</p>
+                                <p>Nasr City, Cairo, Egypt</p>
                             </div>
                         </div>
 
@@ -1516,7 +1579,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Email Address</h4>
-                                <p>abdellrahman.akram@gmail.com</p>
+                                <p>Info@itcore-eg.com</p>
                             </div>
                         </div>
 
@@ -1623,8 +1686,8 @@
                     <h4 class="footer-subtitle">Contact Info</h4>
                     <div class="footer-contact">
                         <p><i class="fas fa-phone"></i> +20 109 536 3315</p>
-                        <p><i class="fas fa-envelope"></i> info@itcore.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
+                        <p><i class="fas fa-envelope"></i>Info@itcore-eg.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Nasr City, Cairo, Egypt</p>
                     </div>
                 </div>
             </div>
@@ -1902,21 +1965,24 @@
     </script>
 
     <!-- ✅ Top Bar ثابت -->
-    <div class="top-bar">
-      <a href="#home" class="top-logo">
-        <img src="https://i.postimg.cc/28ghsNLg/logo-for-website.jpg" alt="Mini Logo" /> 
-      </a>
-        <h1 class="text">IT Core</h1>
-      <button class="top-menu-btn" onclick="toggleTopMenu()">☰</button>
+<div class="top-bar">
+  <div class="logo-title">
+    <a href="#home" class="top-logo">
+      <img src="https://i.postimg.cc/44tsrF6s/2.png" alt="Mini Logo" /> 
+    </a>
+    <h1 class="text">IT Core</h1>
+  </div>
 
-      <!-- القائمة اللي بتظهر -->
-      <div id="topMenuLinks" class="top-menu-links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
+  <button class="top-menu-btn" onclick="toggleTopMenu()">☰</button>
+
+  <div id="topMenuLinks" class="top-menu-links">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
 </body>
 </html>
